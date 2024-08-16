@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signup Form</div>
+        </div>
+
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+
+            <div class="form-inner">
+                <!-- Login Form -->
+                <form action="login_process.php" method="post" class="login">
+                    <div class="field">
+                        <input type="text" name="nic" placeholder="NIC" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Password" id="loginPassword" required>
+                    </div>
+                    <br>
+                    <div class="show-password-label">
+                        <label class="show-password-label">
+                            <input type="checkbox" onclick="togglePasswordVisibility('loginPassword')"> Show Password
+                        </label>
+                    </div>
+
+                    <br>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <br>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" name="login" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Create an account <a href="#">Signup now</a>
+                    </div>
+                    <div class="logos">
+                        <img src="gover.jpg" alt="Logo 1">
+                        <img src="log.jpg" alt="Logo 2">
+                    </div>
+                </form>
+
+
+                <!-- Signup Form -->
+                <form action="signup_process.php" method="post" class="signup" id="signupForm">
+                    <div class="field-group">
+                        <div class="field">
+                            <input type="text" name="firstname" placeholder="First Name" required>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="lastname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="nic" placeholder="NIC" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Password" id="signupPassword" required>
+                        <small>Password must be at least 8 characters and include letters, numbers, and special characters.</small>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="field">
+                        <input type="password" name="confirm_password" placeholder="Confirm password" id="confirmPassword" required>
+                    </div>
+                    <br>
+
+                    <div class="show-password-label">
+                        <label class="show-password-label">
+                            <input type="checkbox" onclick="togglePasswordVisibility('signupPassword', 'confirmPassword')"> Show Password
+                        </label>
+                    </div>
+                    <bt>
+
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" name="signup" value="Signup">
+                    </div>
+                    <div class="logos">
+                        <img src="gover.jpg" alt="Logo 1">
+                        <img src="log.jpg" alt="Logo 2">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
+    <script>
+        // Function to toggle password visibility
+        function togglePasswordVisibility(...fields) {
+            fields.forEach(function(fieldId) {
+                var passwordField = document.getElementById(fieldId);
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                } else {
+                    passwordField.type = "password";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

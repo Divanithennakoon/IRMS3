@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+   font-family: 'poppins', sans-serif;
+  display: grid;
+    background-image: url('Artboard82.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown-content a {
+  text-align: right;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropbtn {
+  background-color: transparent;
+  color: #005246;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 250px; /* Adjust this width if needed */
+  height: 100%;
+  background: #013E35;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #005246;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .5s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.search-bar {
+  padding: 10px;
+  text-align: center;
+}
+
+.search-bar input[type="text"] {
+  width: 500px;
+  padding: 10px;
+  font-size: 15px;
+  border-color: #01A58D;
+  border-radius: 20px 0px 0px 20px;
+  border-style: groove;
+  outline: none;
+}
+
+.search-bar button {
+  background: #01A58D;
+  width: 50px;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #005246;
+}
+ /*logout button */
+.logout-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #005246;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-btn:hover {
+  background-color: #02322b; /* Darker shade on hover */
+}
+
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+}
+
+.form-container {
+  margin-left: 300px;
+  width: 500px;
+}
+
+.form-container1 {
+  margin-left: 300px;
+  width: 500px;
+}
+
+
+.my-form {
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.my-form input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.my-form select { 
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 217px;
+}
+
+.my-form button {
+  width: 100px;
+  padding: 8px 8px;
+  background-color: #01A58D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.my-form button:hover {
+  background-color: #005246;
+}
+
+
+.my-table {
+  margin-left: 300px;
+  margin-top: 25px;
+  margin-right: 25px;
+  width: 1000px;
+  border-collapse: collapse;
+}
+
+.my-table th, .my-table td {
+  color: #005246;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.my-table th {
+  background-color: #E1F4F2;
+}
+
+.my-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+ /*-------------------------------notification---------------*/
+ :root {
+  --main-bg-color: #f0f0f0;
+  --item-hover-bg: #8e44ad;
+  --item-hover-color: #fff;
+  --item-bg-color: #fff;
+  --box-header-bg: #035145;
+  --box-header-color: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  background: var(--main-bg-color);
+}
+.box {
+  background-color: #9ED6CC;
+
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -50%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 15px;
+}
+
+.notificationitem {
+  width: 32px;
+  order: 1;
+
+}
+.box-header {
+  font-size: 20px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: safe left;
+  align-items: center;
+  background: var(--box-header-bg);
+  color: var(--box-header-color);
+  flex-grow: 1;
+}
+
+
+.list {
+  position: relative;
+  padding: unset;
+  margin: 0;
+  width: 100%;  
+}
+
+.item {
+  list-style: none;
+  padding: 15px 40px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.1);
+  position: relative;
+  background: var(--item-bg-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}/*
+.item:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: var(--item-hover-bg);
+  color: var(--item-hover-color);
+}
+*/
+.item i {
+  color: var(--item-hover-bg);
+}
+/*
+.item:hover i {
+  color: var(--item-hover-color);
+}
+*/
+.right-icon {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* manage book edit and remove*/
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #013E35; /* Default button color */
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #013E35; /* Darker shade on hover */
+}
+
+.btn-edit {
+  background-color: #28a745; /* Green color for edit button */
+}
+
+.btn-remove {
+  background-color: #dc3545; /* Red color for remove button */
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .sidebar, .main-content {
+      flex: 1 1 100%;
+  }
+
+  form input, form select, form button {
+      flex: 1 1 100%;
+  }
+}

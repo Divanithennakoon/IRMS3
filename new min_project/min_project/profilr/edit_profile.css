@@ -1,0 +1,104 @@
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background-image: url('nature.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Navbar styles */
+.navbar {
+    color: aliceblue;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 1200px; /* Optional: restrict maximum width */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #ddd; /* Lighten the color on hover */
+}
+
+/* Container for the form */
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form header */
+.container h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Labels for form fields */
+.container label {
+    color: #555555;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* Input fields */
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styles */
+.container button[type="submit"] {
+    background-color: #01A58D;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #018e7a;
+}
+
+/* Form responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container button[type="submit"] {
+        font-size: 16px;
+    }
+}

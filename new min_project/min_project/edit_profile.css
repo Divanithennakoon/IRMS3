@@ -1,0 +1,115 @@
+/* General body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background-image: url('Artboard52.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #01A58D;
+    margin: auto;
+    border: 10px solid #ccc;
+    margin-top: 80px;
+        
+}
+
+/* Title styling */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group wrapper to align the columns */
+.form-group1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Individual form group styling */
+.form-group {
+    width: 48%;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Input field styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #01A58D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-group button:hover {
+    background-color: #019a81;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-group1 {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+}
+
+.navbar {
+    color: aliceblue;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #000000;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* User's profile image styling */

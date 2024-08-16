@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>INS DASHBOARD</title>
+    <link rel="stylesheet" href="Style_FileTracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+
+       .search-results {
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Remove border radius */
+    background-color: #f1f1f1; /* Set background color to #f1f1f1 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Ensures the container adjusts to fit its contents */
+    width: auto; /* Allows the container to expand based on content */
+    overflow: auto; /* Provides a scrollbar if content overflows */
+}
+
+.search-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.search-results th, .search-results td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
+}
+
+.search-results th {
+    background-color: #005246;
+    color: white;
+    border-radius: 0; /* Remove border radius from table headers */
+}
+
+
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.search-form').submit(function(e) {
+                e.preventDefault(); // prevent form from submitting normally
+
+                // Serialize form data
+                var formData = $(this).serialize();
+
+                // Send AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: 'search.php',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        var resultsHtml = '<div class="search-results">' +
+                                          '<p style="font-size: 18px; text-align: center; margin-bottom: 10px;">Search File Results Of  <strong>' + $('#search').val() + '</strong></p>' +
+                                          '<table>' +
+                                          '<tr>' +
+                                          '<th>Record Room No</th>' +
+                                          '<th>File Name</th>' +
+                                          '<th>File Id</th>' +
+                                          '<th>Cupboard No</th>' +
+                                          '<th>Rack No</th>' +
+                                          '<th>Docket No</th>' +
+                                          '<th>Position at Docket</th>' +
+                                          '</tr>';
+
+                        $.each(response, function(index, row) {
+                            resultsHtml += '<tr>' +
+                                           '<td>' + row.Record_Room_No + '</td>' +
+                                           '<td>' + row.File_Name + '</td>' +
+                                           '<td>' + row.File_Id + '</td>' +
+                                           '<td>' + row.Cupboard_No + '</td>' +
+                                           '<td>' + row.Rack_No + '</td>' +
+                                           '<td>' + row.Docket_No + '</td>' +
+                                           '<td>' + row.Position_at_Docket + '</td>' +
+                                           '</tr>';
+                        });
+
+                        resultsHtml += '</table></div>';
+
+                        // Display results under the search bar
+                        $('.form-container').append(resultsHtml);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <header>Admin Panel</header>
+        <ul>
+            <li><a href="admin.php">Admin </a></li>
+            <li><a href="index-main.html">Add File</a></li>
+            <li><a href="index-AddDocket.html">Add New Docket</a></li>
+            <li><a href="Search.html">Search File</a></li>
+            <li><a href="UpdateD.php">Update Docket</a></li>
+            <li><a href="UpdateF.php">Update File</a></li>
+       <!-- <li><a href="DeleteDocket.php">Dispose Docket</a></li> -->
+        </ul>
+    </div>
+    <br><br><br>
+    <div class="search-bar">
+        <header>Search File</header>
+    </div>
+    <br><br>
+    <div class="form-container">
+        <form class="search-form" method="post">
+            <div class="form-group2">
+                <input type="text" id="search" name="search" placeholder="Type here">
+                <input type="submit" id="btnsearch" name="btnsearch" placeholder="Search">      
+            </div>
+        </form>
+    </div>
+</body>
+</html>

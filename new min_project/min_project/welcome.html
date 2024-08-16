@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #005246;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-container {
+            position: relative; /* Make container relative for absolute positioning */
+        }
+        .profile-btn {
+            position: absolute;
+            top: 10px; /* Adjust top position as needed */
+            right: 10px; /* Adjust right position as needed */
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
+            z-index: 1000; /* Ensure button is above other elements */
+        }
+        .profile-icon {
+            margin-right: 10px; /* Add space between profile icon and logout button */
+            vertical-align: middle; /* Align icon vertically */
+        }
+        .logout-btn {
+            position: absolute;
+            top: 10px; /* Adjust top position as needed */
+            left: 10px; /* Adjust left position as needed */
+            background-color: #005246;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            z-index: 1000; /* Ensure button is above other elements */
+        }
+        .logout-btn:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <a href="logout.php" class="logout-btn">Logout</a>
+        <a href="profile_page.php" class="profile-btn">
+            <img src="profile.jpg" alt="Profile Icon" class="profile-icon">
+        </a>
+        <div class="background-image"></div>
+        <div class="content-box">
+            <div class="welcome-text">
+
+                <h1>WELCOME!</h1>
+                <h4>Integrated Resource Management System for the Ministry of Agriculture in the Western Province</h4>
+            </div>
+            <div class="buttons">
+                <form action="welcome.php" method="post" class="buttons">
+                    <button type="submit" name="access" value="library">LIBRARY SYSTEM</button>
+                    <button type="submit" name="access" value="inventory">INVENTORY SYSTEM</button>
+                    <button type="submit" name="access" value="file_tracking">FILE TRACKING SYSTEM</button>
+                </form>
+            </div>
+            <div class="logos">
+                <img src="gover.jpg" alt="Logo 1">
+                <img src="log.jpg" alt="Logo 2">
+            </div>
+        </div>
+    </div>
+    <div class="notification" id="notification"></div>
+    <script>
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+        <?php if ($error_message): ?>
+            showNotification("<?php echo $error_message; ?>");
+        <?php endif; ?>
+    </script>
+</body>
+</html>

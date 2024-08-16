@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-top: 80px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #005246;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003d36;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="left-content">
+            <p class="greeting">Hi, Welcome!</p>
+            <p class="description">Let's think positively about everything...</p>
+        </div>
+    </div>
+    <div class="form-container">
+        <h2>Enter NIC to Delete User Profile</h2>
+        <form action="delete_profile_process.php" method="POST">
+            <label for="nic">NIC:</label>
+            <input type="text" id="nic" name="nic" required>
+            <button type="submit">Search User</button>
+        </form>
+    </div>
+</body>
+</html>

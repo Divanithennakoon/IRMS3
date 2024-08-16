@@ -1,0 +1,145 @@
+/* General body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background-image: url('Artboard52.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire profile */
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+    color: aliceblue;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #01A58D;
+}
+
+/* Main profile view styling */
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* User's profile image styling */
+.view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border-radius: 15px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+#profilepic {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* User details text alignment */
+.details {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.details h2, .details p {
+    margin: 0;
+    color: #333;
+}
+
+/* Button container and individual button styling */
+.btnclass {
+    margin-top: 20px;
+}
+
+.btnset {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btnset:hover {
+    background-color: #01A58D;
+}
+
+/* Styling for detailed information section */
+.hdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    width: 35%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.hdetails h3 {
+    margin: 10px 0;
+    color: rgb(85, 85, 85);
+}
+
+.hdetails p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.hdetails p::before {
+    content: "• ";
+    color: #01A58D;
+    font-weight: bold;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+    width: 35%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    position: relative;
+}

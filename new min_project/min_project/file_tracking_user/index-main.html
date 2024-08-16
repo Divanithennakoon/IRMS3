@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>INS DASHBOARD</title>
+  <link rel="stylesheet" href="Style_FileTracking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <style>
+    .form-container {
+      border: 2px solid #ccc;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #f9f9f9;
+    }
+  </style> 
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <header>Uaer Panel</header>
+    <ul>
+      <li><a href="user.php">user</a></li>
+      <li><a href="index-main.html">Add File</a></li>
+      <li><a href="index-AddDocket.html">Add New Docket</a></li>
+      <li><a href="Search.html">Search File</a></li>
+       <!-- <li><a href="DeleteDocket.php">Dispose Docket</a></li> -->
+    </ul>
+  </div>
+  
+  <br>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <header>Add File</header>
+  </div>
+
+  
+  <!-- Form -->
+  <div class="form-container">
+    <form class="my-form" action="AddFile.php" method="post">
+      <div class="form-group">
+        <label for="fileNo">File NO</label>
+        <input type="text" id="fileNo" name="fileNo" placeholder=" " required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="fileName">File Name</label>
+        <input type="text" id="fileName" name="fileName" placeholder=" " required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="minit">Number Of Minits Sheets</label>
+        <input type="number" id="minit" name="minit" placeholder=" " min="0" required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="year">File Opened Year</label>
+        <input type="number" id="year" name="year" placeholder=" " min="1901" max="2155" required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="cupboardno">Cupboard NO</label>
+        <input type="number" id="cupboardno" name="cupboardno" placeholder=" " required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="rackno">Rack NO</label>
+        <input type="number" id="rackno" name="rackno" placeholder=" " required>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="docketno">Docket NO</label>
+        <input type="number" id="docketno" name="docketno" placeholder=" " required>
+      </div>    
+      <br />
+      <div class="button-group">
+        <button type="submit" id="btn-add">Add</button>
+        <button type="reset" id="btn-clear">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <section></section>
+</body>
+</html>

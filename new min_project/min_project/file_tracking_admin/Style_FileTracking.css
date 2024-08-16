@@ -1,0 +1,229 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'poppins', sans-serif;
+  display: grid;
+    background-image: url('Artboard82.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 18vw; /* Adjust this width if needed */
+  height: 100%;
+  background: #013E35;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #005246;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .5s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+
+.search-bar {
+  padding: 10px;
+  text-align: center;
+}
+
+.form-container {
+  margin-left: 25vw;
+  margin-top: 1vh;
+  width: 40vw;
+ }
+ 
+ 
+.my-form {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  font-size: 17px;
+}
+
+
+.search-form{
+  display: inline;
+  font-size: 30px;
+}
+
+
+
+.search-form input,
+.search-form select { 
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.search-form #btnsearch{
+  width: 30%;
+  padding:10px;
+  background-color: #01A58D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; 
+}
+
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 3px;
+}
+
+.my-form input,
+.my-form select { 
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form-group2{
+	display: inline;
+}
+
+.my-form button {
+  width: 30%;
+  padding:5px;
+  background-color: #01A58D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#search{
+	width:62%;
+}
+
+
+.my-form button:hover {
+  background-color: #005246;
+}
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  font-size: 18px
+}
+.search-bar header {
+  font-size: 36px;
+  color:#005246;
+  line-height: 40px;
+  text-align: center;
+}
+
+/*
+#leftsection{
+	float: left;
+	width:60%;
+}
+
+
+#rightsection{
+	margin-right:0.02vw;
+	margin-top:6vh;
+	padding:0.5vw;
+}
+
+#rightsection button {
+  margin: 0.5vw ;
+  width: 15%;
+  padding: 8px 8px;
+  background-color: #01A58D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btn-clearr{
+  background-color: white;
+  color: #01A58D;
+  border:0.5px solid #01A58D;
+}
+
+#rightsection button:hover {
+  background-color: #005246;
+}*/
+
+.container {
+    position: relative;
+}
+
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #ccc;   
+}
+
+td{
+    word-wrap: break-word;
+    overflow-wrap:break-word;
+    width: 5vw;
+    font-size: 12px;
+}
+
+#table_heading th{
+    text-align: left;
+    padding: 0.3vw;
+    background-color: #01A58D;
+    color: white;   
+}
+
+#file_table tr:nth-child(even) {
+  background-color: #f9f9f9;
+  
+} 
+
+#file_table tr{
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#file_table td{
+    padding: 0.3vw;
+}
+
+#table th{
+  width: 10%;
+  padding:5px;
+  background-color: #01A58D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
